@@ -24,3 +24,13 @@ Track focus. Move seamlessly between the goals of your life, and keeping your mi
 ### Introspection
 
 * Which tasks can you use music to help? (Executional vs analysis)
+* How do you decide between priorities at a moment in time?
+   * Utilize different emotional states for different activities
+      * E.g. Sad, lonely, happy, energized, thoughtful
+   * Use different days or habits to fit priorities together
+
+### Exposition
+
+* Expose to your friends what your emotional state is and how your goals can fit together
+   * Find people with similar issues
+   * Find people with similar emotional states
