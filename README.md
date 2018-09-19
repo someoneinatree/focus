@@ -34,3 +34,12 @@ Track focus. Move seamlessly between the goals of your life, and keeping your mi
 * Expose to your friends what your emotional state is and how your goals can fit together
    * Find people with similar issues
    * Find people with similar emotional states
+
+## Technical Roadmap
+
+* Create SVG React Components to represent nodes etc - linkable?
+* Create basic component that does graphql query for the data
+   * Create links with actions
+      * Feeling (emoji -> stuck, happy, sad, overwhelmed)
+      * Thought (what? recorded at current timestamp)
+      * Intention (what? when? (today / soon / someday))
