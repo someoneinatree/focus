@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Projects from './Projects'
+import Garden from './Garden'
 
 const Application = styled.div`
 	font-family: sans-serif;
@@ -13,8 +13,8 @@ const Application = styled.div`
 export default class App extends React.Component {
 	render () {
 		return (<Application>
-			<h1>unfile</h1>
-			<Projects />
+			<h1>focus</h1>
+			<Garden />
 		</Application>)
 	}
 }
