@@ -43,3 +43,36 @@ Track focus. Move seamlessly between the goals of your life, and keeping your mi
       * Feeling (emoji -> stuck, happy, sad, overwhelmed)
       * Thought (what? recorded at current timestamp)
       * Intention (what? when? (today / soon / someday))
+
+### Node Types
+
+* Inputs
+* Outputs
+* Node
+   * Health
+      * Quantitative (0:100%) [User setting custom scale factors, 0:32, -100:100]
+      * Qualitative
+      * Osmotic (speed of absorbtion, calcuation (sum child roots))
+   * Thoughts
+      * Ideas/notes over time
+   * Intentions
+      * Ideas/notes over time
+* Sun & soil - external factors in growth/mood to watch out for
+
+* Views
+   * Tree (high-level: purpose-outcome-brainstorm)
+   * Branch (brainstorm-organize-next steps)
+
+## Getting This Done
+
+1. Purpose
+   * Make tracking my entire life of goals and projects pleasant, exhaustive, extensible and tractable
+1. Outcome visioning
+   * Have somewhere to update progress/ideas/organize/next steps for projects and subprojects
+   * Maintain a vision of how goals relate to each other
+1. Brainstorming
+   * Start designing tree / branch views
+   * Start working out how tree and branch interact
+1. Organize
+1. Next Steps
+   * Start coding
