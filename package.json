@@ -4,6 +4,10 @@
   "description": "Focus tracker",
   "main": "start.js",
   "scripts": {
+    "start": "nodemon ./start",
+    "build": "npm run build:ui",
+    "build:ui": "webpack --config ui/webpack.config.js",
+    "dev": "concurrently 'npm:build' 'npm:start' --kill-others",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
