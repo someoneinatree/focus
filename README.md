@@ -124,7 +124,7 @@ schema Schema {
 * Inputs
 * Outputs
 * Node
-   * Health
+   * "Health" (outcome tracking)
       * Quantitative (0:100%) [User setting custom scale factors, 0:32, -100:100]
       * Qualitative
       * Osmotic (speed of absorbtion, calcuation (sum child roots))

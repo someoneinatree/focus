@@ -1,0 +1,58 @@
+type QuantifiedOutcome {
+	current: Number
+	goal: Number
+	unit: String
+	format: String
+}
+
+type Timescale {
+	time: String # YYYY-MM-DD | YYYY-MM | YYYY-MM-DD-HH
+	scale: String # year / mnoth / week / day / hour
+}
+
+# 5) next steps / intentions
+type Intention {
+	content: String
+	timescale: Timescale
+	isResolved: Boolean
+}
+
+# 3) brainstorming / 4) organizing
+type Thought {
+	content: String
+}
+
+# 2) outcome visualization / "flowers"
+type Outcome {
+	description: String
+	isQuantitative: Boolean
+	quantified: QuauntifiedOutcome
+}
+
+# 1) purpose
+type Branch {
+	name: String
+	description: String
+	branches: [Branch]
+	outcomes: [Outcome]
+	thoughts: [Thought]
+	tags: String
+	isPrivate: Boolean
+}
+
+type Plant {
+	branches: [Branch]
+}
+
+type Query {
+	plants: [Plant]
+}
+
+type Mutation {
+	example(id: String!): Focus
+}
+
+schema {
+	query: Query
+	mutation: Mutation
+}
