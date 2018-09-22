@@ -19,6 +19,81 @@ Track focus. Move seamlessly between the goals of your life, and keeping your mi
 ### Focus
 * Track which goals you're focusing on at any point in time
 
+## Graphical Conceptualization
+
+### "Tree" / "Garden"
+
+* Inputs as roots
+   * Describe root structure, track nourishment (flow from roots to trunk) and droughts
+   * Base of tree - your happiness / effectiveness
+   * Roots - things that contribute to your happiness effectiveness
+      * E.g. physical fitness
+      * Social life
+* Outputs as fruits
+   * Describe intentions (flowers) and achievements (fruit)
+* You are your own tree, but you also may represent others (organizations, companies, projects) as trees
+* Set parts of your tree as public so that friends can visit yours and help you out
+
+### UI
+
+* `/` - Home
+* `/tree/+` - New tree
+* `/tree/me` - Your tree (add roots [inputs], branches [outputs])
+
+### Schema
+
+```gql
+type HistoricalStatus {
+	status: Status
+	time: String // ISO Date
+}
+
+type Status {
+	current: String
+	history: [HistoricalStatus]
+}
+
+interface Node {
+	name: String
+	description: String
+	status: Status
+	path: String // position in tree (relationship to other `name`s)
+	privacyCircle: Number // -1: public, 0: shared with friends, 1: private
+	degradationSpeed: Number // 
+	health: Number // 0-100% showing "health" of this node
+}
+
+type Input implements Node {
+	...Node
+	nourishments: [Nourishment]
+	droughts: [Drought]
+}
+
+type Output implements Node {
+	...Node
+	flowers: [Flower]
+	fruits: [Fruit]
+}
+
+type Tree {
+	name: String
+	inputs: [Input]
+	output: [Output]
+}
+
+type Query {
+	trees: [Tree]
+}
+
+type Mutation {
+	tree: TreeMutations
+}
+
+schema Schema {
+	query: Query
+}
+```
+
 ## Thoughts
 
 ### Introspection
