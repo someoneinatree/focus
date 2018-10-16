@@ -59,7 +59,7 @@ interface Node {
 	status: Status
 	path: String // position in tree (relationship to other `name`s)
 	privacyCircle: Number // -1: public, 0: shared with friends, 1: private
-	degradationSpeed: Number // 
+	degradationSpeed: Number //
 	health: Number // 0-100% showing "health" of this node
 }
 
@@ -127,7 +127,7 @@ schema Schema {
    * "Health" (outcome tracking)
       * Quantitative (0:100%) [User setting custom scale factors, 0:32, -100:100]
       * Qualitative
-      * Osmotic (speed of absorbtion, calcuation (sum child roots))
+      * Osmotic (speed of absorption, calculation (sum child roots))
    * Thoughts
       * Ideas/notes over time
    * Intentions
@@ -151,3 +151,10 @@ schema Schema {
 1. Organize
 1. Next Steps
    * Start coding
+
+## Design
+No idea what it should actually look like, structure-wise.
+
+A purpose is satisfied by outcomes. (Outcomes describe satisfaction criteria.)
+  Outcomes may be split into strings of outcomes. E.g. string.
+An outcome is achieved using organized brainstorming, resulting in a list of next steps.
