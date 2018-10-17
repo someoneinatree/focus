@@ -1,55 +1,101 @@
-type QuantifiedOutcome {
-	current: Number
-	goal: Number
-	unit: String
-	format: String
-}
+# type QuantifiedOutcome {
+# 	current: Number
+# 	goal: Number
+# 	unit: String
+# 	format: String
+# }
 
-type Timescale {
-	time: String # YYYY-MM-DD | YYYY-MM | YYYY-MM-DD-HH
-	scale: String # year / mnoth / week / day / hour
-}
+# type Timescale {
+# 	time: String # YYYY-MM-DD | YYYY-MM | YYYY-MM-DD-HH
+# 	scale: String # year / mnoth / week / day / hour
+# }
 
-# 5) next steps / intentions
-type Intention {
-	content: String
-	timescale: Timescale
-	isResolved: Boolean
-}
+# # 5) next steps / intentions
+# type Intention {
+# 	content: String
+# 	timescale: Timescale
+# 	isResolved: Boolean
+# }
 
-# 3) brainstorming / 4) organizing
+# # 3) brainstorming / 4) organizing
+# type Thought {
+# 	content: String
+# }
+
+# # 2) outcome visualization / "flowers"
+# type Outcome {
+# 	description: String
+# 	isQuantitative: Boolean
+# 	quantified: QuauntifiedOutcome
+# }
+
+# # 1) purpose
+# type Branch {
+# 	name: String
+# 	description: String
+# 	branches: [Branch]
+# 	outcomes: [Outcome]
+# 	thoughts: [Thought]
+# 	tags: String
+# 	isPrivate: Boolean
+# }
+
+# type Plant {
+# 	branches: [Branch]
+# }
+
+# type Query {
+# 	plants: [Plant]
+# }
+
+
+# 5. Next Actions (-> Plans)
+
+
+# 4. Organize
+
+
+# 3. Brainstorm (-> Thoughts)
 type Thought {
-	content: String
-}
-
-# 2) outcome visualization / "flowers"
-type Outcome {
-	description: String
-	isQuantitative: Boolean
-	quantified: QuauntifiedOutcome
-}
-
-# 1) purpose
-type Branch {
-	name: String
-	description: String
-	branches: [Branch]
-	outcomes: [Outcome]
+	summary: String
+	detail: String
 	thoughts: [Thought]
-	tags: String
-	isPrivate: Boolean
 }
 
-type Plant {
-	branches: [Branch]
+# 2. Outcome (Acceptance criteria - what does this project being complete look like?)
+type OutcomeComponent {
+	
+}
+
+type Outcome {
+	summary: String # one-line quick description of thingy
+	detail: String # long-form description of the expected outcome
+	components: [OutcomeComponent]
+}
+
+# 1. Project
+type Coordinates {
+	x: Number
+	y: Number
+}
+
+type Garden {
+	gardens: [Garden]
+	size: Coordinates
+	position: Coordinates
+}
+
+type Yard {
+	gardens: [Garden]
+	size: Coordinates
 }
 
 type Query {
-	plants: [Plant]
+	yard: Yard
 }
 
 type Mutation {
-	example(id: String!): Focus
+	join(name: String!): String
 }
 
 schema {
